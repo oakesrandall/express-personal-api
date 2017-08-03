@@ -44,7 +44,11 @@ app.get('/api', function (req, res) {
         endpoints: [
             { method: "GET", path: "/api", description: "Describes all available endpoints" },
             { method: "GET", path: "/api/profile", description: "Data about me" },
-            { method: "POST", path: "/api/pets", description: "Create a new pet" }
+            { method: "POST", path: "/api/pets", description: "Create a new pet" },
+            { method: "GET", path: "/api/pets", description: "Show all pets" },
+            { method: "GET", path: "/api/pets/:name", description: "Show data about a specific pet" },
+            { method: "PUT", path: "/api/pets/:name", description: "Update a pet's info" },
+            { method: "DELETE", path: "/api/pets/:name", description: "Delete a pet" },
         ]
     });
 });
